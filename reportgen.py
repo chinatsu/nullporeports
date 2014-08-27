@@ -110,7 +110,7 @@ infodict = {
 env = Environment(loader=PackageLoader('moe'))
 template = env.get_template('index.html')
 
-# change filename if wanted, 'getheredreport.html' is a pretty shit name
+# change filename if wanted, 'gatheredreport.html' is a pretty shit name
 with open(output_dir + 'gatheredreport.html', 'w') as f:
     f.write(template.render(infodict=infodict))
 print('\nDone!')
