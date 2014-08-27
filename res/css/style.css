@@ -1,0 +1,52 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #A6A23E;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-size: 5em;
+}
+h2{
+    font-size: 3em;
+    padding-left: 40px;
+    margin-bottom: -10px;
+}
+div {
+    padding: 40px 0 40px 0;
+    width:100%;
+}
+span{
+    padding-left: 40px;
+}
+#head h1{
+    padding: 0;
+    margin: 0 0 -70px 0;
+}
+#head{
+    background-color: #DBB4AC;
+}
+#totgames{
+    background-color: #13422F;
+}
+#tothours{
+    background-color: #849972;
+}
+#totpieces{
+    background-color: #D9D094;
+}
+#totrots{
+    background-color: #458F71;
+}
+#totmoves{
+    background-color: #DB8F80;
+}
+#totfaults{
+    background-color: #4F2F1D;
+}
+#lines{
+    background-color: #A2847F;
+}
+#ppm{
+    background-color: #8F5145;
+}
