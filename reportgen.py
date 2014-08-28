@@ -10,19 +10,19 @@ from decimal import *
 from jinja2 import Environment, PackageLoader
 
 
-# REPORTS_DIR = 'C:\\NullpoMino\\report\\'  # windows example
-REPORTS_DIR = '/home/china/report/'  # linux example
+# REPORTS_DIR = 'C:\\NullpoMino\\report'  # windows example
+REPORTS_DIR = '/home/china/report/test'  # linux example
 YOUR_NAME = 'cn'  # change to your preferred nick
 # note the double backslashes in windows paths.
 
-output_dir = path.dirname(path.realpath(sys.argv[0])) + sep
+output_dir = path.dirname(path.realpath(sys.argv[0]))
 # output dir can be changed to somewhere else if wanted.
 # just follow the directory format of REPORTS_DIR examples,
 # and remember to place the res folder in the same dir for css.
 
 statlist = []
 processed = 0
-for fname in glob(REPORTS_DIR + '*.html'):
+for fname in glob(REPORTS_DIR + sep + '*.html'):
     if re.match('.*[0-9]\.html$', fname):
         soup = BeautifulSoup(open(fname))
         if processed == 1:  # lol
@@ -111,6 +111,6 @@ env = Environment(loader=PackageLoader('moe'))
 template = env.get_template('index.html')
 
 # change filename if wanted, 'gatheredreport.html' is a pretty shit name
-with open(output_dir + 'gatheredreport.html', 'w') as f:
+with open(output_dir + sep + 'gatheredreport.html', 'w') as f:
     f.write(template.render(infodict=infodict))
 print('\nDone!')
